@@ -28,6 +28,11 @@ dependencies {
 }
 ```
 
+This library also uses some common android libraries. So if you are not already using them then make sure you add these libraries to your module level `build.gradle`
+- `androidx.appcompat:appcompat:1.1.0`
+- `androidx.constraintlayout:constraintlayout:1.1.3`
+- `com.google.android.material:material:1.0.0`
+
 Since this library is using compiled native code so we recommend to split the apk based on the architecture of the processor to reduce your app size. Use followig code to do so.
 ```
 android {
