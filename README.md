@@ -3,39 +3,49 @@ Helps organisations to collect pictures of customerID cards &amp; Selfies in a m
 
 ## Minimum Requirements
 - `minSdkVersion 21` 
-- `Kotlin 1.3+`
 - `AndroidX`
 
 ## Getting Started
-Configure Kotlin support.
+
 Add following lines in your root ```build.gradle```
 ```
 buildscript {
-    ext.kotlin_version = '1.3.61'
-    dependencies {
-        ...
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+    allprojects {
+        repositories {
+            ...
+            maven { url "https://dl.bintray.com/invoidandroid12/android/" }
+        }
     }
 }
 ```
 
 Add following lines in your module level ```build.gradle```
 ```
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-
-android {
-    ...
-    defaultConfig {
-       minSdkVersion 21
-    }
-    ...
-}
 dependencies {
     ....
-    implementation 'offlineaadhaar_url_pending'
+    implementation 'co.invoid.android:photohelper:1.0.0'
 }
 ```
+
+Since this library is using compiled native code so we recommend to split the apk based on the architecture of the processor to reduce your app size. Use followig code to do so.
+```
+android {
+    splits {
+
+        // Configures multiple APKs based on ABI.
+        abi {
+
+            // Enables building multiple APKs per ABI.
+            enable true
+
+            // Specifies that we do not want to also generate a universal APK that includes all ABIs.
+            universalApk false
+        }
+    }
+}
+```
+
 ## Initialize SDK
 
 ```
