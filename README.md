@@ -113,4 +113,18 @@ To Obtain your organisation's authkey, contact us at hello@invoid.co
     }
 ```
 
+## Release Notes
+### `1.0.3`
+- Add option to disable continue if glare is detected.
+- Enable customization of message displayed to user when glare is detected.
+- Update Material component library `com.google.android.material:material:1.1.0`
+
+### `1.0.2`
+- Fix proguard rules
+
+### `1.0.1`
+- Add option to enable or disable choose image from gallery.
+
+### `1.0.0`
+- Inital release
 
