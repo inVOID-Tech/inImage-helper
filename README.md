@@ -24,7 +24,7 @@ Add following lines in your module level ```build.gradle```
 ```
 dependencies {
     ....
-    implementation 'co.invoid.android:photohelper:1.0.3'
+    implementation 'co.invoid.android:photohelper:1.0.4'
 }
 ```
 
@@ -114,6 +114,10 @@ To Obtain your organisation's authkey, contact us at hello@invoid.co
 ```
 
 ## Release Notes
+### `1.0.4`
+- Minor UI Changes.
+- Fix error in capturing photo on some devices.
+
 ### `1.0.3`
 - Add option to disable continue if glare is detected.
 - Enable customization of message displayed to user when glare is detected.
