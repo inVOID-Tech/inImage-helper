@@ -9,13 +9,10 @@ Helps organisations to collect pictures of customerID cards &amp; Selfies in a m
 
 Add following lines in your root ```build.gradle```
 ```
-buildscript {
-
-    allprojects {
-        repositories {
-            ...
-            maven { url "https://dl.bintray.com/invoidandroid12/android/" }
-        }
+allprojects {
+    repositories {
+        ...
+        maven { url "https://dl.bintray.com/invoidandroid12/android/" }
     }
 }
 ```
@@ -24,7 +21,7 @@ Add following lines in your module level ```build.gradle```
 ```
 dependencies {
     ....
-    implementation 'co.invoid.android:photohelper:1.0.4'
+    implementation 'co.invoid.android:photohelper:1.0.5'
 }
 ```
 
@@ -114,6 +111,9 @@ To Obtain your organisation's authkey, contact us at hello@invoid.co
 ```
 
 ## Release Notes
+### `1.0.5`
+- Fix alignment of overlay on camera preview.
+
 ### `1.0.4`
 - Minor UI Changes.
 - Fix error in capturing photo on some devices.
