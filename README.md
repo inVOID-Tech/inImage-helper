@@ -21,7 +21,7 @@ Add following lines in your module level ```build.gradle```
 ```
 dependencies {
     ....
-    implementation 'co.invoid.android:photohelper:1.0.5'
+    implementation 'co.invoid.android:photohelper:1.0.6rc'
 }
 ```
 
@@ -67,7 +67,7 @@ yourinitbutton.setOnClickListener(new View.OnClickListener() {
 ```
 
 - Using ```PhotoHelperOptions.Builder.setPhotoOptions()``` use can choose whether you want to take just selfie, just document images or both. Use one of the following ```PhotoHelperOptions.PhotoOptions.SELFIE_ONLY```, ```PhotoHelperOptions.PhotoOptions.DOC_PHOTO_ONLY``` or ```PhotoHelperOptions.PhotoOptions.SELFIE_WITH_DOC_PHOTO```
-- To set Document type use ```PhotoHelperOptions.Builder.setDocumentType()```. Currently we support only these document types ```DocumentType.AADHAAR```, ```DocumentType.PAN```, ```DocumentType.DRIVING_LICENSE```and ```DocumentType.VOTER_ID```
+- To set Document type use ```PhotoHelperOptions.Builder.setDocumentType()```. Currently we support only these document types ```DocumentType.AADHAAR```, ```DocumentType.PAN```, ```DocumentType.DRIVING_LICENSE```, ```DocumentType.VOTER_ID``` and ```DocumentType.PASSPORT```.
 - To enable or disable image from gallery option use ```PhotoHelperOptions.Builder.setGalleryOption()```. Use one of the following ```PhotoHelperOptions.GalleryOption.ALLOW_IN_DOC_ONLY```, ```PhotoHelperOptions.GalleryOption.ALLOW_IN_SELFIE_ONLY``` to enable or disable in either of the screens. If you want to enable in all the screens then use ```PhotoHelperOptions.GalleryOption.ALLOW```, by default it is disabled in all screens.
 - To disable continue option if glare is detected in document images use ```PhotoHelperOptions.Builder.disableContinueIfGlare()```.
 
@@ -111,6 +111,12 @@ To Obtain your organisation's authkey, contact us at hello@invoid.co
 ```
 
 ## Release Notes
+
+### `1.0.6rc`
+- Fix crash on Android 8.0
+- Fix camera preview getting stretched on some device when camera is opened for the fist time
+- Add Passport support
+
 ### `1.0.5`
 - Fix alignment of overlay on camera preview.
 
